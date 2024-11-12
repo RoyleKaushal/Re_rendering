@@ -6,7 +6,7 @@ const waitingForSomething = (ms) => {
     now = Date.now();
   }
 };
-export default function SlowComponent() {
-  waitingForSomething(1000);
+export default function SlowComponent({time}) {
+  waitingForSomething(time[0]);
   return <>I am slow</>;
 }
